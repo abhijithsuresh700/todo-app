@@ -1,6 +1,7 @@
 import Todo from "../models/todoModel.js";
 
 export const createTodo = async(req,res)=>{
+    console.log("hitted here",req.body)
     const todo = new Todo({
         todoItem:req.body.todoItem,
         userId:req.body.userId
@@ -16,6 +17,16 @@ export const createTodo = async(req,res)=>{
 export const getAllTodos = async(req,res)=>{
     try {
         const todos = await Todo.find();
+        res.status(200).json(todos)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getSingleUserTodos = async(req,res)=>{
+    console.log(req.params.id,"id check")
+    try {
+        const todos = await Todo.find({userId:req.params.id});
         res.status(200).json(todos)
     } catch (error) {
         console.log(error)

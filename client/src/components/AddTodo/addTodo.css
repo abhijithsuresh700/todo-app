@@ -1,0 +1,20 @@
+.dashboardAddTodo {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .dashboardAddInput {
+    background-color: #394e6b;
+    color: white;
+    border: transparent;
+    padding: 5px;
+  }
+  
+  .dashboardAddButton {
+    background-color: #394e6b;
+    color: white;
+    padding: 5px;
+  }

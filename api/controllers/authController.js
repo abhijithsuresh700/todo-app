@@ -33,9 +33,10 @@ export const login = async (req, res) => {
     if (!isPassword) {
       res.send(400).json("Wrong Password");
     }
-
-    const {fullName,email,number} = user._doc
-    res.status(200).json({fullName,email,number})
+console.log(user._doc,"doc check")
+const {_id,fullName,email,number} = user._doc
+console.log(_id,"doc userId check")
+    res.status(200).json({_id,fullName,email,number})
 
   } catch (error) {
     console.log(error);

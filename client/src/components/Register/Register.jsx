@@ -17,7 +17,6 @@ const Register = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
-  console.log(credentials, "checkk at register");
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -86,7 +85,7 @@ const Register = () => {
             onChange={handleChange}/>
         </div>
         <button className="registerButton" onClick={handleClick}>Sign Up</button>
-        <span className="registerSpan">Already a member? Login</span>
+        <span className="registerSpan" onClick={()=>navigate("/login")}>Already a member? Login</span>
       </div>
     </div>
   );

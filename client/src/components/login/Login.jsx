@@ -15,7 +15,6 @@ const Login = () => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
 
-  console.log(credentials,"checkk")
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -24,6 +23,8 @@ const Login = () => {
         "/auth/login",
         credentials
       );
+      localStorage.setItem('user', res.data.fullName);
+      localStorage.setItem('userId', res.data._id);
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -53,7 +54,7 @@ const Login = () => {
           onChange={handleChange} />
         </div>
         <button className="loginButton" onClick={handleClick}>Login</button>
-        <span className="loginSpan">Not a member? SignUp</span>
+        <span className="loginSpan" onClick={()=>navigate("/register")}>Not a member? SignUp</span>
       </div>
     </div>
   );
@@ -61,10 +62,3 @@ const Login = () => {
 
 export default Login;
 
-// const Login = ()=>{
-//     return(
-//         <div></div>
-//     )
-// }
-
-// export default Login

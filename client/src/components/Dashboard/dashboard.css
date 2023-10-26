@@ -18,9 +18,9 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* border: 3px solid #424c54; */
   border-radius: 10px;
   padding: 10px;
+  /* background-color: red; */
 }
 
 .dashboardSearchBx {
@@ -61,24 +61,12 @@
   gap: 5px;
 }
 
-.cancelIcon {
-  background-color: #081420;
-  /* background-color: transparent; */
-  color: #8071e7;
-}
-
-.editIcon {
-  background-color: transparent;
-  color: #8071e7;
-}
-
 .navButtons {
   position: absolute;
   top: 20px;
   right: 60px;
   gap: 0px;
 }
-
 
 .navLogoutButton {
   margin: 10px;
@@ -88,3 +76,53 @@
   background-color: #394e6b;
   color: white;
 }
+
+.dashboardButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.dashboardButtonset {
+  margin-left: 10px;
+  display: flex;
+}
+
+.cancelbuttonIcon {
+  background-color: transparent;
+  color: #8071e7;
+  padding-right: 5px;
+}
+
+.editbuttonIcon {
+  background-color: transparent;
+  color: #e4e2ec;
+  padding-left: 5px;
+}
+
+.dashboardButton:hover {
+  text-decoration: underline;
+}
+
+/* .dashboardAddTodo {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.dashboardAddInput {
+  background-color: #394e6b;
+  color: white;
+  border: transparent;
+  padding: 5px;
+}
+
+.dashboardAddButton {
+  background-color: #394e6b;
+  color: white;
+  padding: 5px;
+} */
